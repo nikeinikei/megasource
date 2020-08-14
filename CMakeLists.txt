@@ -167,6 +167,7 @@ endif()
 
 set(MEGA_ZLIB_VER "1.2.11")
 set(MEGA_LUA51_VER "5.1.5")
+set(MEGA_LUA54_VER "5.4.0")
 set(MEGA_LUAJIT_VER "2.1.0-0bee44c")
 set(MEGA_LIBOGG_VER "1.3.2")
 set(MEGA_LIBVORBIS_VER "1.3.5")
@@ -196,6 +197,12 @@ message(STATUS "Configuring: lua ${MEGA_LUA51_VER}")
 message(STATUS "-----------------------------------------------------")
 add_subdirectory("libs/lua-${MEGA_LUA51_VER}" ${CMAKE_BINARY_DIR}/lua51)
 set(MEGA_LUA51 lua51)
+
+message(STATUS "-----------------------------------------------------")
+message(STATUS "Configuring: lua ${MEGA_LUA54_VER}")
+message(STATUS "-----------------------------------------------------")
+add_subdirectory("libs/lua-${MEGA_LUA54_VER}" ${CMAKE_BINARY_DIR}/lua54)
+set(MEGA_LUA54 lua54)
 
 message(STATUS "-----------------------------------------------------")
 message(STATUS "Configuring: libogg ${MEGA_LIBOGG_VER}")
@@ -289,6 +296,7 @@ endif()
 set(MEGA_3P
 	${MEGA_ZLIB}
 	${MEGA_LUA51}
+	${MEGA_LUA54}
 	${MEGA_LIBOGG}
 	${MEGA_LIBVORBIS}
 	${MEGA_LIBVORBISFILE}
